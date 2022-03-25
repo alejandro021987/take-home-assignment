@@ -1,0 +1,24 @@
+type Characteristics {
+  roof: String
+  style: String
+  area: Int
+  bathsFull: Int
+  fireplaces: Int
+  heating: String
+  foundation: String
+  laundryFeatures: String
+}
+
+type Property {
+    id: ID
+    characteristics: Characteristics
+    address: String
+    photos: [String]
+    listPrice: Int
+}
+
+type Query {
+  "A simple type for getting started!"
+  hello: String
+  Properties(city: String): [Property!]!
+}
